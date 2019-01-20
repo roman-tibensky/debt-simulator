@@ -1,0 +1,5 @@
+<mat-card>
+  <h1>Income per  hour: {{finance.clickMultiplier}}</h1>
+  <h1>Total income: {{finance.income}}</h1>
+  <button mat-raised-button [disabled]="!finance.gameOn" color="primary" (click)="earnMoney()">Work hard!</button>
+</mat-card>

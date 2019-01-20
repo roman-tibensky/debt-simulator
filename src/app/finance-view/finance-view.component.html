@@ -1,0 +1,20 @@
+
+<button mat-raised-button color="primary" (click)="resetGame()">Start</button>
+
+<div>
+<debt-screen></debt-screen>
+
+<mat-card>
+  <button mat-raised-button color="primary" [disabled]="!finance.gameOn" (click)="payDebt(debtIncome(finance.income))">Pay {{debtIncome(finance.income)}}</button>
+  <button mat-raised-button color="primary" [disabled]="100 > finance.income || !finance.gameOn" (click)="payDebt(debtIncome(100))">Pay 100</button>
+  <button mat-raised-button color="primary" [disabled]="500 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(500))">Pay 500</button>
+  <button mat-raised-button color="primary" [disabled]="1000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(1000))">Pay 1000</button>
+  <button mat-raised-button color="primary" [disabled]="5000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(5000))">Pay 5000</button>
+  <button mat-raised-button color="primary" [disabled]="10000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(10000))">Pay 10000</button>
+  <button mat-raised-button color="primary" [disabled]="50000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(50000))">Pay 50000</button>
+  <button mat-raised-button color="primary" [disabled]="100000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(100000))">Pay 100000</button>
+  <button mat-raised-button color="primary" [disabled]="500000 > finance.income || !finance.gameOn"  (click)="payDebt(debtIncome(500000))">Pay 500000</button>
+</mat-card>
+
+<income-view></income-view>
+</div>
